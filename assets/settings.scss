@@ -1,0 +1,12 @@
+.field {
+    margin-top: 4px;
+}
+
+.btns {
+    @include flex($gap: 48px);
+    margin-top: 20px;
+
+    .btn {
+        font-size: 14px;
+    }
+}

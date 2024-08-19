@@ -1,0 +1,46 @@
+.form-cnt {
+    @include flex($dir: column);
+    flex-grow: 1;
+
+    .form {
+        @include flex($wrap: wrap);
+        max-width: 375px;
+        padding: 16px 32px;
+        background-color: rgba(var(--fg), 0.1);
+        box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.1);
+        border-radius: 16px;
+
+        .header {
+            width: 100%;
+
+            .title {
+                margin: 4px 0;
+                font-size: 32px;
+            }
+
+            .subtitle {
+                margin-bottom: 28px;
+                color: rgba(var(--fg), 0.7);
+            }
+        }
+
+        .field {
+            margin-top: 5px;
+        }
+
+        .btn {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .form-cnt {
+        .form {
+            min-width: 100vw;
+            background-color: transparent;
+            box-shadow: none;
+            border-radius: 0;
+        }
+    }
+}
